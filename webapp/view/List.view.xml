@@ -1,0 +1,17 @@
+<mvc:View controllerName="sap.btp.listdetail.controller.List"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f">
+    
+    <f:DynamicPage id="dynamicPageOverviewId" headerExpanded="true" toggleHeaderOnTitleClick="true">
+        <f:content>
+            <List id="list" items="{/UX_C_Carrier_TP}" busyIndicatorDelay="0" 
+                growing="true" growingThreshold="10" growingScrollToLoad="true" selectionChange="onSelect">
+
+                <items>
+                    <ObjectListItem id="objectListItem" title="{Carrname}" intro="{Carrid}" press="onSelect"></ObjectListItem>
+                </items>
+            </List>
+        </f:content> 
+    </f:DynamicPage> 
+</mvc:View>
